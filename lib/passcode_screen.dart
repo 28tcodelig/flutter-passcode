@@ -11,6 +11,7 @@ import 'package:passcode_screen/shake_curve.dart';
 typedef PasswordEnteredCallback = void Function(String text);
 typedef IsValidCallback = void Function();
 typedef CancelCallback = void Function();
+List list = [];
 
 class PasscodeScreen extends StatefulWidget {
   final Widget title;
@@ -75,7 +76,7 @@ class _PasscodeScreenState extends State<PasscodeScreen>
         if (status == AnimationStatus.completed) {
           setState(() {
             enteredPasscode = '';
-            controller.value = 1000;
+            controller.value = 0;
           });
         }
       })
