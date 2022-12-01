@@ -75,7 +75,7 @@ class _PasscodeScreenState extends State<PasscodeScreen>
         if (status == AnimationStatus.completed) {
           setState(() {
             enteredPasscode = '';
-            controller.value = 0;
+            controller.value = 1000;
           });
         }
       })
